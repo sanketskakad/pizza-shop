@@ -1,13 +1,10 @@
 <template>
   <AlertComponent />
-  <!-- <SignupComponent /> -->
-  <LoginComponent />
+  <RouterView />
 </template>
 <script setup lang="ts">
-import SignupComponent from '@/pages/Signup.vue';
-import LoginComponent from '@/pages/Login.vue';
 import { initializeApp } from 'firebase/app';
-import { getAnalytics } from 'firebase/analytics';
+// import { getAnalytics } from 'firebase/analytics';
 import AlertComponent from '@/components/Alert.vue';
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_APIKEY,
@@ -20,6 +17,6 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
 </script>

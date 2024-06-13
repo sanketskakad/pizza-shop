@@ -117,10 +117,16 @@
 import { ref } from 'vue';
 // import { storeToRefs } from 'pinia';
 import { useUser } from '../store/useUser';
+import { useRouter } from 'vue-router';
 
 const username = ref<string>('');
 const password = ref<string>('');
 const userState = useUser();
+const router = useRouter();
+
+if (userState.isLogin) {
+  router.push('/');
+}
 
 const signUpHandler = () => {
   userState.signUp(username.value, password.value);

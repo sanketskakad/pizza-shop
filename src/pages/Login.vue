@@ -117,10 +117,16 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useUser } from '../store/useUser';
+import { useRouter } from 'vue-router';
 
 const username = ref<string>('');
 const password = ref<string>('');
 const userState = useUser();
+const router = useRouter();
+
+if (userState.isLogin) {
+  router.push('/');
+}
 
 const loginHandler = () => {
   userState.login(username.value, password.value);
