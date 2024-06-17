@@ -2,6 +2,7 @@ import {
   createWebHistory,
   createRouter,
   RouteLocationNormalized,
+  RouteRecordRaw,
 } from 'vue-router';
 import SignupPage from '@/pages/Signup.vue';
 import LoginPage from '@/pages/Login.vue';
@@ -15,7 +16,7 @@ import ProfileInfoPage from '@/pages/ProfileInfo.vue';
 import CategoriesPage from '@/pages/Categories.vue';
 import CartPage from '@/pages/Cart.vue';
 
-const routes = [
+const routes: RouteRecordRaw[] = [
   { path: '/login', component: LoginPage, name: 'login' },
   { path: '/signup', component: SignupPage, name: 'signup' },
   { path: '/menu-list', component: MenuListPage, name: 'menu-list' },
@@ -39,9 +40,9 @@ const router = createRouter({
   routes,
 });
 
-router.beforeEach((to, from, next) => {
-  // debugger;
-  next();
-});
+// router.beforeEach((to, from, next) => {
+//   debugger;
+//   next();
+// });
 
 export default router;

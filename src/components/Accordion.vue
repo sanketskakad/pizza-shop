@@ -8,7 +8,7 @@
         @click="toggle"
         type="button"
         class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-orange-200 dark:focus:ring-orange-800 dark:border-gray-700 dark:text-gray-400 hover:bg-orange-100 dark:hover:bg-gray-800 gap-3"
-        :class="{ 'rounded-b-xl': toggle }"
+        :class="{ 'rounded-b-xl': expand }"
         data-accordion-target="#accordion-color-body-1"
         aria-expanded="true"
         aria-controls="accordion-color-body-1"
